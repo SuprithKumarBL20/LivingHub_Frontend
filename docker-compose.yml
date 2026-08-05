@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_GATEWAY: http://localhost:8000
+    container_name: livinghub-frontend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
