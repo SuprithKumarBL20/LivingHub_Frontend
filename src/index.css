@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand Gradients & Bases */
+  --color-primary: #0C1E29;          /* Main dark background */
+  --color-secondary: #07131B;        /* Deepest dark wrapper background */
+  --color-surface: #112533;          /* Main panel surface background */
+  --color-card: #183446;             /* Card and grid container surface */
+  
+  /* Accents */
+  --color-accent: #FFFE15;            /* Electric Yellow brand color */
+  --color-accent-hover: #FFD700;      /* Warm Gold hover state */
+  --color-border: #29465C;            /* Styled border highlight tint */
+  
+  /* Text Shades */
+  --color-text-primary: #FFFFFF;      /* High contrast headers */
+  --color-text-secondary: #C8D3DA;    /* Standard descriptive body */
+  --color-muted: #8EA5B5;             /* Secondary/sub-label text */
+  
+  /* Semantic Statuses */
+  --color-success: #22C55E;           /* Success / Checked-in / Paid */
+  --color-warning: #F59E0B;           /* Pending / Warning / Expected */
+  --color-danger: #EF4444;            /* Overdue / SOS / Deleted */
+  --color-info: #3B82F6;              /* General notice / System Info */
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Base DOM Reset */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0C1E29;
+  color: #C8D3DA;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism primitives */
+@utility glass-panel {
+  background-color: rgba(24, 52, 70, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(41, 70, 92, 0.8);
+}
+
+@utility glass-input {
+  background-color: rgba(12, 30, 41, 0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(41, 70, 92, 0.6);
+  color: #FFFFFF;
+  transition: all 0.25s ease;
+
+  &:focus {
+    border-color: #FFFE15;
+    box-shadow: 0 0 0 1px rgba(255, 254, 21, 0.15);
+  }
+}
+
+/* Simple keyframe slide transitions */
+@keyframes slideIn {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility animate-slide-in {
+  animation: slideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}

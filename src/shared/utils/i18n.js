@@ -1,0 +1,35 @@
+export const translations = {
+  en: {
+    welcome: "Welcome back",
+    dashboard: "Dashboard",
+    settings: "Settings",
+    complaints: "Complaints",
+    visitors: "Visitors",
+    bills: "Bills",
+    profile: "Profile",
+    community: "Community",
+    facilities: "Facilities",
+  },
+  kn: {
+    welcome: "ಸ್ವಾಗತ",
+    dashboard: "ಡ್ಯಾಶ್ಬೋರ್ಡ್",
+    settings: "ಸಂಯೋಜನೆಗಳು",
+    complaints: "ದೂರುಗಳು",
+    visitors: "ಸಂದರ್ಶಕರು",
+    bills: "ಬಿಲ್ಲುಗಳು",
+    profile: "ಪ್ರೊಫೈಲ್",
+    community: "ಸಮುದಾಯ",
+    facilities: "ಸೌಲಭ್ಯಗಳು",
+  },
+  hi: {
+    welcome: "स्वागत है",
+    dashboard: "डैशबोर्ड",
+    settings: "सेटिंग्स",
+    complaints: "शिकायतें",
+    visitors: "आगंतुक",
+    bills: "विधेयक",
+    profile: "प्रोफ़ाइल",
+    community: "समुदाय",
+    facilities: "सुविधाएं",
+  }
+};
