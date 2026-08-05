@@ -88,7 +88,7 @@ export const AppShell = () => {
     { label: t.complaints, path: '/complaints', icon: Wrench, show: hasPermission('write:complaints') || hasPermission('update:complaints') },
     { label: t.visitors, path: '/visitors', icon: QrCode, show: hasPermission('request:visitors') || hasPermission('scan:visitors') },
     { label: t.facilities, path: '/facilities', icon: Calendar, show: hasPermission('book:facilities') },
-    { label: t.bills, path: '/billing', icon: DollarSign, show: hasPermission('book:facilities') || user?.role === 'ACCOUNTANT' },
+    { label: t.bills, path: '/finance', icon: DollarSign, show: hasPermission('book:facilities') || user?.role === 'ACCOUNTANT' || user?.role === 'SUPER_ADMIN' },
     { label: t.community, path: '/community', icon: Users, show: true },
     { label: 'System Logs', path: '/super-admin', icon: FileText, show: user?.role === 'SUPER_ADMIN' },
     { label: t.settings, path: '/settings', icon: Settings, show: true },
